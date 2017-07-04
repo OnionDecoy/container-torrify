@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+    helloworldtorrifiedcontainer:
+        image: iotdocktor/container-torrify
+        hostname: helloworldtorrifiedcontainer
+        links:
+            - helloworldcontainer:helloworldcontainer
+
+    helloworldcontainer:
+        image: kitematic/hello-world-nginx
+        hostname: helloworldcontainer
+        ports: 
+            - 80:80
+
