@@ -4,7 +4,7 @@ Torrify a Container into a TOR Hidden Service
 
 ```sh
 # run a container with a network application
-$ docker run -d --name hello_world_container kitematic/hello-world-nginx
+$ docker run -d -p 8080:80 --name hello_world_container kitematic/hello-world-nginx
 
 # and just link it to this container
 $ docker run -tid --link hello_world_container --name hello_world_torrified_container iotdocktor/container-torrify

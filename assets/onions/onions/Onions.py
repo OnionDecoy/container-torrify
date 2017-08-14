@@ -30,7 +30,7 @@ class Onions(object):
 
     def __str__(self):
         if not self.onions:
-            return 'No onion site'
+            return 'No onion site. Please check in a minute.'
         return '\n'.join(['%s: %s' % (service, onion)
                           for (service, onion) in self.onions.items()])
 
